@@ -1,0 +1,26 @@
+server:
+  port: 8082
+
+spring:
+  cloud:
+    function:
+      definition: transactionConsumer;consumeAndReport;consumeAndReportFraud
+
+    stream:
+      bindings:
+        transactionConsumer-in-0:
+          destination: financial-transactions
+
+        consumeAndReport-in-0:
+          destination: financial-transactions
+        consumeAndReport-out-0:
+          destination: compliance-reports
+
+        consumeAndReportFraud-in-0:
+          destination: financial-transactions
+        consumeAndReportFraud-out-0:
+          destination: fraud-alerts
+
+      kafka:
+        binder:
+          brokers: localhost:9092
