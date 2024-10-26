@@ -1,6 +1,6 @@
 # Spring Cloud Stream With Apache Kafka Binder
 
-## [Click here to watch the video for demonstration.]()
+## [Click here to watch the video for demonstration.](https://youtu.be/iw7dGvjBf9c)
 
 
 ### Prerequisites:
